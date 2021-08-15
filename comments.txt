@@ -1,0 +1,65 @@
+problem1.py:# Problem 1
+problem1.py:# Max Zinski
+problem1.py:# an input is valid if it is a positive, whole number
+problem1.py:# https://www.almanac.com/content/temperature-conversion c = (f - 32) * 5/9
+problem2.py:# Problem 2
+problem2.py:# Max Zinski
+problem2.py:# an input is valid if it is a whole number between 0 and 100, inclusive
+problem3.py:# Problem 3
+problem3.py:# Max Zinski
+problem3.py:        # iterate through once and verify all criteria are met
+problem3.py:        # using ascii codes to establish upper and lower bounds is a common pattern I've observed in algorithm problems involving strings
+problem3.py:        # https://www.programiz.com/python-programming/examples/ascii-character
+problem4.py:# Problem 4
+problem4.py:# Max Zinski
+problem4.py:# only find the max if all arguments are numbers (int or float). Although we could allow other number types like decimal, the objective of this
+problem4.py:# exercise seems to be focused on finding the max of numbers, not converting/comparing different number types.
+problem4.py:    # https://stackoverflow.com/questions/7604966/maximum-and-minimum-values-for-ints the initial max value should be the smallest allowed number in python
+problem4.py:# tests
+problem4.py:# print(max_of_three("a",2.0,3))
+problem4.py:# print(max_of_three(3,2,1))
+problem4.py:# print(max_of_three(-1000,2.0,1))
+problem5.py:# Problem 5
+problem5.py:# Max Zinski
+problem5.py:# an input is valid if it's a number
+problem5.py:    # this initial check simplifies the process of verifying the rest of the input
+problem5.py:        # valid numbers have at most one decimal
+problem5.py:    # our number has non-zero decimals and therefore cannot be divisible by an integer
+problem5.py:    # at this point, our number_input (within the context of this script) is guaranteed to be a string representing an integer (could be negative)
+problem5.py:            # flip should_add, so we alternate correctly
+problem6.py:# Problem 6
+problem6.py:# Max Zinski
+problem6.py:# a valid word or phrase contains only spaces and valid english letters
+problem6.py:    # remove spaces
+problem6.py:    formatted_input = user_input.replace(" ", "") # https://www.journaldev.com/23763/python-remove-spaces-from-string#:~:text=Python%20String%20strip()%20function%20will%20remove%20leading%20and%20trailing%20whitespaces.&text=If%20you%20want%20to%20remove,or%20rstrip()%20function%20instead.
+problem6.py:        # character is not one of the 26 English characters
+problem6.py:# some of this code is redundant since is_valid implements some of it, but splitting up validation and formatting makes the code more modular imo
+problem6.py:# a palindrome is a word or phrase that READS the same forwards and backwards. Allow upper and lowercase mismatches when evaluating if
+problem6.py:# a string is a palindrome. For example, Racecar is a palindrome.
+problem6.py:# palindrome detection lends itself very well to stacks
+problem6.py:    # create two iterators, one starting from the front of the string and one starting from the back.
+problem6.py:    # at each step, compare the two characters at each iterator 
+problem7.py:# Problem 7
+problem7.py:# Max Zinski
+problem7.py:# an input is valid if it's a whole, positive number
+problem7.py:    # type is not valid (int or float)
+problem7.py:    # there is a non-zero decimal which is not valid
+problem7.py:    # hight must be non-negative
+problem7.py:# tests
+problem7.py:# pyramid(10)
+problem7.py:# print("\n")
+problem7.py:# pyramid(10.0)
+problem7.py:# print("\n")
+problem7.py:# pyramid("square")
+problem7.py:# print("\n")
+problem7.py:# pyramid(10.7)
+problem7.py:# print("\n")
+problem7.py:# pyramid(-1)
+problem8.py:# Problem 8
+problem8.py:# Max Zinski
+problem8.py:        # False indicates the game is over. i.e. the user does not want to play again
+problem8.py:# reminds me of a state machine where the transitions between states are dictated by:
+problem8.py:# --> the user's response to being asked to play again
+problem8.py:# --> the cpu's weapon selection relative to the player. i.e. ties lead to different state transitions than decisive results
+problem8.py:    # key: user weapon, val: the cpu weapon that the user's weapon beats
+problem8.py:    # prompt_for_selection will either return False or a valid weapon (rock, paper, scissors)
